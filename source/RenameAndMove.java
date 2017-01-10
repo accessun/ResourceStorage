@@ -13,7 +13,13 @@ import org.apache.commons.io.FilenameUtils;
 
 public class RenameAndMove {
     
-    static List<String> fileTypesToProcess = Arrays.asList("png", "jpg", "jpeg");
+    static List<String> fileTypesToProcess;
+    static String githubPrefix;
+    
+    static {
+        fileTypesToProcess = Arrays.asList("png", "jpg", "jpeg");
+        githubPrefix = "https://raw.githubusercontent.com/accessun/ResourceStorage/master/pictures/";
+    }
 
     public void run() throws IOException {
         Path dir = Paths.get(System.getProperty("user.dir"));
@@ -33,6 +39,7 @@ public class RenameAndMove {
                 if (Files.exists(picDir) && Files.isDirectory(picDir)) {
                     try {
                         Files.move(p, newPath);
+                        System.out.println("==> " + githubPrefix + newName + "." + ext);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
