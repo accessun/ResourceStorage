@@ -17,7 +17,7 @@ public class RenameAndMove {
     static String githubPrefix;
     
     static {
-        fileTypesToProcess = Arrays.asList("png", "jpg", "jpeg");
+        fileTypesToProcess = Arrays.asList("png", "jpg", "jpeg", "svg");
         githubPrefix = "https://raw.githubusercontent.com/accessun/ResourceStorage/master/pictures/";
     }
 
