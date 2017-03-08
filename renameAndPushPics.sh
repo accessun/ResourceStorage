@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-java -jar ./RenameAndMove-0.0.1-SNAPSHOT.jar
+java -jar ./RenameAndMove.jar
 
 # commmit and push to the remote
 git add -A
